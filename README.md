@@ -66,7 +66,7 @@ A detailed explanation can be found in this [document][commit-message-format].
 
 ## `fixup` commits
 
-You're stuff's on staging but you're making small, progressive tweeks. `fixup` is your friend.
+Your stuff's on staging but you're making small, progressive tweeks. `fixup` is your friend.
 
 Fixup commits are associated with commit you've already made. They allow you to make commits without inserting additional messages. They can also be automatically squashed, for those civilized developers.
 

@@ -1,7 +1,7 @@
-## Commit Guidelines
+# Commit Guidelines
 Mostly reasonable guidelines for commit messages.
 
-### Commit Message Format
+## Commit Message Format
 Commit messages consist of a [message](#message), [description](#description)
 and [related](#related).
 
@@ -18,7 +18,7 @@ A [message](#message) consists of a [type](#type), [scope](#scope), and
 
 No line should be longer than 80 characters long, for optimal github viewing.
 
-### Message
+## Message
 ```
 <type>(<scope>): <subject>
 ```
@@ -63,3 +63,25 @@ This guide is ~~pirated from~~ inspired by Angular's excellent
 A detailed explanation can be found in this [document][commit-message-format].
 
 [commit-message-format]: https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#
+
+## `fixup` commits
+
+You're stuff's on staging but you're making small, progressive tweeks. `fixup` is your friend.
+
+Fixup commits are associated with commit you've already made. They allow you to make commits without inserting additional messages. They can also be automatically squashed, for those civilized developers.
+
+Here's how it works. `commit` takes `--fixup` as on option. When used, you'll have to provide the SHA of the commit your is fixing up. Like so:
+
+```bash
+git commit --fixup a9b8c7
+
+# aliases also work but get confusing after your first fix
+
+git commit --fixup head
+```
+
+You probably don't memorize your recent commit SHAs. You can use the syntax below as a backword search. This fixup commit will attach to the most recent commit, where "style" is in the message:
+
+```bash
+git commit --fixup :/style
+```
